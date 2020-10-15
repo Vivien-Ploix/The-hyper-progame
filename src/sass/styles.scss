@@ -1,0 +1,261 @@
+@import "~bootstrap/scss/bootstrap";
+
+$base-color: #353b48;
+$margin-bottom: 50px;
+
+body,html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $base-color;
+  font-family: "Big Noodles";
+}
+
+#main-title {
+  font-size: 4rem;
+}
+
+a:hover:not(.search_icon) {
+  text-decoration: none;
+  color: white;
+}
+a:not(.search_icon), a:visited {
+	text-decoration: none;
+	position: relative;
+	color: white;
+	
+	&:after {
+		content: '';
+		height: 3px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		background: white;
+		transition: 0.2s;
+	}
+
+	&:hover:after {
+		width: 100%;
+	}
+	
+	&.block {
+		display: block;
+		padding: 0.5em;
+		
+		&:hover {
+      background: #eee;
+		}
+	}
+}
+
+
+@font-face {
+  font-family: "Big Noodles";
+  src: url("../fonts/big_noodle_titling.ttf");
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.card {
+  padding: 0;
+  max-width: 22rem;
+  margin-top: 50px;
+  .card-img-top {
+    height: 250px;
+    opacity: 1;
+  }
+  background-color: $base-color;
+  border: none;
+  position: relative;
+}
+
+.imagecontainer {
+  position: relative;
+}
+
+.text-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  color: white;
+}
+
+.card:hover .card-img-top {
+  opacity: 0;
+  transition: 0.2s;
+}
+.card:hover .text-card {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.jumbotron-fluid {
+  height: auto;
+}
+
+
+
+// Searchbar
+
+.searchbar{
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  height: 60px;
+  background-color: #181818;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+
+.search_input{
+  color: white;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 450px;
+  line-height: 40px;
+  padding: 0 10px;
+  caret-color:red;
+
+}
+
+.search_icon{
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color:#e74c3c !important;
+  text-decoration:none;
+  background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/jumbotron-test.jpg");
+
+  /* Set a specific height */
+  height: 90%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.game_background {
+  height: 800px;
+  width: auto;
+}
+
+.page-detail {
+  color: white;
+}
+
+#gamescontainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#barcontainer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  a {
+    color: white;
+    font-size: 2rem;
+  }
+  padding-top: 50px;
+}
+
+.showMore {
+  display: flex;
+  justify-content: center;
+  margin: 75px;
+}
+
+
+#screens {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: space-evenly;
+}
+.screenshot {
+  width: 550px;
+  height: 400px;
+  margin-bottom: 45px;
+}
+
+.page-detail {
+  padding: 100px;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+  padding-left: 15%;
+  justify-content: space-evenly;
+
+  video {
+    width: 80%;
+  }
+}
+
+
+.similar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.similar-title {
+  padding-left: 5%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+.logo {
+  margin-right: 10px;
+}
+
+#platform-select {
+  margin-top: 7%;
+  margin-left: 7%;
+}
